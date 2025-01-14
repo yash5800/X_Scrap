@@ -1,14 +1,12 @@
 from flask import Flask, jsonify, render_template
 import pymongo,os
 from dotenv import load_dotenv
-from selenium_s import *
 
 load_dotenv()
 
 
 app = Flask(__name__)
 
-Scrap()
 
 # MongoDB connection
 client = pymongo.MongoClient(os.getenv("MONGO_URI"))
