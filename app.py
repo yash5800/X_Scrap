@@ -1,10 +1,10 @@
 from flask import Flask, jsonify, render_template
-import pymongo
+import pymongo,os
 
 app = Flask(__name__)
 
 # MongoDB connection
-client = pymongo.MongoClient("mongodb+srv://jokerdeva18:zTXXIMgCE6kdvqIB@cluster0.31bwl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+client = pymongo.MongoClient(os.getenv("MONGO_URI"))
 db = client["twitter_trends"]
 collection = db["trending_topics"]
 
