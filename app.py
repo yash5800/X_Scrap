@@ -1,5 +1,9 @@
 from flask import Flask, jsonify, render_template
 import pymongo,os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 app = Flask(__name__)
 
